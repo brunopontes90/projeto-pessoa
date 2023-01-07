@@ -1,0 +1,11 @@
+create table pessoa (
+    id int auto_increment,
+    nome varchar(50) not null,
+    idade numeric(2) not null,
+    cpf numeric(11) not null,
+    endereco varchar(50) not null,
+    numero_casa numeric(4) not null,
+    complemento varchar(10),
+    sexo enum('M', 'F'),
+    primary key(id)
+);
