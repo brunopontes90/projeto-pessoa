@@ -9,5 +9,6 @@ create table pessoa (
     numero_casa numeric(4) not null,
     complemento varchar(10),
     sexo enum('M', 'F'),
+    isAdmin numeric(1),
     primary key(id)
 );
