@@ -1,8 +1,11 @@
 import './App.css';
+//import { Button } from 'reactstrap';
 
 function App() {
   return (
-   <h1>Front-End</h1>
+   <div>
+    <h1 className="text-center">Front-End</h1>
+   </div>
   );
 }
 
