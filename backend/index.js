@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const env = require('dotenv').config();
 
 const cors = require('cors');
@@ -8,7 +8,7 @@ const cors = require('cors');
 const db = mysql.createConnection({
     host: `${process.env.MYSQL_DOCKER_HOST}`,
     user: `${process.env.MYSQL_DOCKER_USER}`,
-    pass: `${process.env.MYSQL_DOCKER_PASS}`,
+    password: `${process.env.MYSQL_DOCKER_PASS}`,
     database: `${process.env.MYSQL_DOCKER_DATABASE}`,
     port: `${process.env.MYSQL_DOCKER_PORT}`
 });
@@ -24,7 +24,7 @@ db.connect(function (err) {
     }
 })
 
-app.get('/getuser', (req, res) => {
+app.get('/', (req, res) => {
 
     let SQl = "SELECT * FROM pessoa";
     db.query(SQl, (err, result) => {
