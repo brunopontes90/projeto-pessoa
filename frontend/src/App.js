@@ -1,11 +1,20 @@
+import React, { useEffect, useState } from 'react';
+import Axios from 'axios';
 import './App.css';
-//import { Button } from 'reactstrap';
+import List from "./components/List/List";
 
 function App() {
+  const [listPessoas, setListPessoas] = useState();
+
+  useEffect(() => {
+    Axios.get("http://localhost:3001/")
+      .then((response) => { setListPessoas(response.data) });
+  });
+
   return (
-   <div>
-    <h1 className="text-center">Front-End</h1>
-   </div>
+    <div>
+      <List listPessoas={listPessoas} />
+    </div>
   );
 }
 
