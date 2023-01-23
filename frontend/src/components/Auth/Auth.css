@@ -1,0 +1,15 @@
+:root {
+    --graylight: #D8D8D8;
+    --gray: #585858;
+}
+
+#login {
+    padding: 25px;
+}
+
+#login-column {
+    padding: 50px;
+    border-radius: 20px;
+    background-color: var(--graylight);
+    box-shadow: 5px 5px 5px 5px var(--gray);
+}
