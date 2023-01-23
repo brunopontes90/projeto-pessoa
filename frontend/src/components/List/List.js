@@ -12,12 +12,14 @@ function List(props) {
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
                             <th scope="col">Idade</th>
                             <th scope="col">CPF</th>
                             <th scope="col">Endereço</th>
                             <th scope="col">Nº Casa</th>
                             <th scope="col">Complemento</th>
                             <th scope="col">Sexo</th>
+                            <th scope="col">Senha</th>
                             <th scope="col">Admin</th>
                             <th scope="col">Ação</th>
                         </tr>
@@ -28,12 +30,14 @@ function List(props) {
                                 <tr>
                                     <th scope="row">{index + 1}</th>
                                     <td>{data.nome}</td>
+                                    <td>{data.email}</td>
                                     <td>{data.idade}</td>
                                     <td>{data.cpf}</td>
                                     <td>{data.endereco}</td>
                                     <td>{data.numero_casa}</td>
                                     <td>{data.complemento}</td>
                                     <td>{data.sexo}</td>
+                                    <td>{data.senha}</td>
                                     {data.isAdmin == 1 ? <td>Sim</td> : <td>Não</td>}
                                     <td>
                                         <div className="d-flex">
