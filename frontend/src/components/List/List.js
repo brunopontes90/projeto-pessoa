@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function List(props) {
-    const { listPessoas } = props;
+    const { listPessoas, handleDelete, handleInsert, handleUpdate } = props;
 
     const handlePessoas = () => {
         return (
@@ -25,7 +26,7 @@ function List(props) {
                         return (
                             <tbody key={index}>
                                 <tr>
-                                    <th scope="row">{data.id}</th>
+                                    <th scope="row">{index + 1}</th>
                                     <td>{data.nome}</td>
                                     <td>{data.idade}</td>
                                     <td>{data.cpf}</td>
@@ -35,13 +36,23 @@ function List(props) {
                                     <td>{data.sexo}</td>
                                     {data.isAdmin == 1 ? <td>Sim</td> : <td>Não</td>}
                                     <td>
-                                        <div>
-                                            <button className="btn btn-primary">
-                                               Edit
-                                            </button>
-                                            <button className="btn btn-danger">
-                                               Del
-                                            </button>
+                                        <div className="d-flex">
+                                            <div>
+                                                <button
+                                                    className="btn btn-primary"
+                                                    onClick={() => console.log('Botão editar')}
+                                                >
+                                                    Edit
+                                                </button>
+                                            </div>
+                                            <div>
+                                                <button
+                                                    className="btn btn-danger"
+                                                    onClick={() => handleDelete()}
+                                                >
+                                                    Del
+                                                </button>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -53,8 +64,20 @@ function List(props) {
         );
     }
     return (
-        <div>
-            <h1 className="h1 m-3 text-center">Usuários</h1>
+        <div className="container-fluid">
+            <div className="d-flex ml-5 justify-content-center">
+                <div className="">
+                    <h1 className="h1 m-3">Usuários</h1>
+                </div>
+                <div className="mt-4 ml-5">
+                    <Link
+                        to={"/insert"}
+                        className="btn btn-success fw-bold"
+                    >
+                        +
+                    </Link>
+                </div>
+            </div>
             {handlePessoas()}
         </div>
     );

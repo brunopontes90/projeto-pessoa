@@ -11,8 +11,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} exact />
-      <Route path="/edit" element={<Edit />} />
-      <Route path="/create" element={<Create />} />
+      <Route path="/update" element={<Edit />} />
+      <Route path="/insert" element={<Create />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
