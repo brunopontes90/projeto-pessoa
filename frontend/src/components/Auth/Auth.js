@@ -27,13 +27,13 @@ function Auth(props) {
                             <form id="login-form" className="form" action="" method="post">
                                 <h3 className="text-center">Login</h3>
                                 <div className="form-group">
-                                    <strong><label for="username">Username:</label></strong>
+                                    <strong><label for="username">Email:</label></strong>
                                     <input
                                         type="text"
-                                        id="username"
-                                        name="username"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Email"
                                         className="form-control"
-                                        placeholder="Nome de Usuario"
                                     />
                                 </div>
                                 <div className="form-group mt-2">
