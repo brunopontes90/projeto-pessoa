@@ -47,16 +47,16 @@ function App() {
 
   return (
     <div>
-      {/* <List
+      <List
         listPessoas={listPessoas}
         handleDelete={handleDelete}
       //handleInsert={handleInsert}
       //handleUpdate={handleUpdate}
-      /> */}
-
-      <Auth
-        listPessoas={listPessoas}
       />
+
+      {/* <Auth
+        listPessoas={listPessoas}
+      /> */}
     </div>
   );
 }

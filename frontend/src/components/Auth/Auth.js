@@ -1,18 +1,14 @@
 import React from "react";
 import "./Auth.css";
-import List from '../List/List';
-import { Link } from "react-router-dom";
 
 function Auth(props) {
     const { listPessoas } = props;
 
-    //console.log(listPessoas);
-
     const isAdmin = () => {
         if (listPessoas.email && listPessoas.senha && listPessoas.isAdmin == 1) {
-            alert('Deu certo');
+            //alert('Deu certo');
         } else {
-            alert('Não deu certo');
+            //alert('Não deu certo');
         }
     }
     return (
@@ -31,6 +27,7 @@ function Auth(props) {
                                         name="email"
                                         placeholder="Email"
                                         className="form-control"
+                                        required={true}
                                     />
                                 </div>
                                 <div className="form-group mt-2">
@@ -41,6 +38,7 @@ function Auth(props) {
                                         name="password"
                                         placeholder="Senha"
                                         className="form-control"
+                                        required={true}
                                     />
                                     <button
                                         type="button"

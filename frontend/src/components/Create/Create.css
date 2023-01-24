@@ -1,0 +1,36 @@
+:root {
+    --gray: #585858;
+    --graylight: #D8D8D8;
+    --back: #000000;
+}
+
+#create {
+    padding: 25px;
+}
+
+#create-column {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--graylight);
+    box-shadow: 5px 5px 5px 5px var(--gray);
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+
+#admin,
+#sexo {
+    width: 200px;
+}
+
+.btn-primary:hover {
+    border: none;
+    background-color: var(--back);
+}
+
+.btn-danger:hover {
+    border: none;
+    background-color: var(--back);
+}
