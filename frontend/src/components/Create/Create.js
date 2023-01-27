@@ -9,7 +9,7 @@ function Create() {
                 <h1 className="text-center" id="title">Registrar Usuário</h1>
                 <div className="row justify-content-center m-5">
                     <div className="form-group">
-                        <strong><label>Nome Completo</label></strong>
+                        <strong><label><span className="text-danger">*</span>Nome Completo</label></strong>
                         <input
                             type="text"
                             id="name"
@@ -20,7 +20,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group">
-                        <strong><label>Email:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Email:</label></strong>
                         <input
                             type="text"
                             id="email"
@@ -31,7 +31,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group">
-                        <strong><label>Idade:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Idade:</label></strong>
                         <input
                             type="number"
                             id="idade"
@@ -42,7 +42,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group">
-                        <strong><label>CPF:</label></strong>
+                        <strong><label><span className="text-danger">*</span>CPF:</label></strong>
                         <input
                             type="number"
                             id="cpf"
@@ -53,7 +53,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group">
-                        <strong><label>Endereço:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Endereço:</label></strong>
                         <input
                             type="text"
                             id="address"
@@ -64,7 +64,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group">
-                        <strong><label>Nº residência:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Nº residência:</label></strong>
                         <input
                             type="number"
                             id="number"
@@ -85,7 +85,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group">
-                        <strong><label>Sexo:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Sexo:</label></strong>
                         <div>
                             <select name="sexo" id="sexo">
                                 <option disabled={'true'}>Selecione</option>
@@ -95,7 +95,7 @@ function Create() {
                         </div>
                     </div>
                     <div className="form-group mt-2">
-                        <strong><label>Senha:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Senha:</label></strong>
                         <input
                             id="password"
                             type="number"
@@ -106,7 +106,7 @@ function Create() {
                         />
                     </div>
                     <div className="form-group mt-2">
-                        <strong><label>Admin:</label></strong>
+                        <strong><label><span className="text-danger">*</span>Admin:</label></strong>
                         <div>
                             <select name="admin" id="admin">
                                 <option disabled={'true'}>Selecione</option>
