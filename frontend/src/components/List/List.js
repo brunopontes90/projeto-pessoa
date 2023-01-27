@@ -9,7 +9,7 @@ function List(props) {
             <div className="m-2">
                 <table className="table">
                     <thead className="table-dark">
-                        <tr>
+                        <tr className="text-center">
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
@@ -19,7 +19,7 @@ function List(props) {
                             <th scope="col">Nº Casa</th>
                             <th scope="col">Complemento</th>
                             <th scope="col">Sexo</th>
-                            <th scope="col">Senha</th>
+                            {/* <th scope="col">Senha</th> */}
                             <th scope="col">Admin</th>
                             <th scope="col">Ação</th>
                         </tr>
@@ -27,17 +27,17 @@ function List(props) {
                     {typeof listPessoas !== "undefined" && listPessoas.map((data, index) => {
                         return (
                             <tbody key={index}>
-                                <tr>
+                                <tr className="text-center">
                                     <th scope="row">{index + 1}</th>
                                     <td>{data.nome}</td>
                                     <td>{data.email}</td>
                                     <td>{data.idade}</td>
-                                    <td>{data.cpf}</td>
+                                    <td>{("0" + data.cpf).slice(-11)}</td>
                                     <td>{data.endereco}</td>
                                     <td>{data.numero_casa}</td>
                                     <td>{data.complemento}</td>
                                     <td>{data.sexo}</td>
-                                    <td>{data.senha}</td>
+                                    {/* <td>{data.senha}</td> */}
                                     {data.isAdmin == 1 ? <td>Sim</td> : <td>Não</td>}
                                     <td>
                                         <div className="d-flex">
